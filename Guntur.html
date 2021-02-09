@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+Nama  : Dendi Rizal Fauzi
+Kelas : IF-9
+NIM   : 10120765
+-->
+<link rel="stylesheet" type="text/css" href="Tampilan.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+	<title> Traveler</title>
+</head>
+<body>
+	<div class="header">
+		<a href="index.html"> <img class="merek" src="image/hd2.png"></a>
+	</div>
+	<div class="pilihan" >
+		<div class="dropdown">
+			<a href="index.html#Gunung">
+				<button class="dropbtn">Gunung</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="putri.html">Gunung Putri</a>
+				<a href="bendera.html">Gunung Bendera</a>
+				<a href="guntur.html">Gunung Guntur</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<a href="index.html#Situ">
+				<button class="dropbtn">Situ</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="patenggang.html">Situ Patenggang</a>
+				<a href="cileunca.html">Situ Cileunca</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<a href="index.html#Pantai">
+				<button class="dropbtn">Pantai</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="rancabuaya.html">Pantai Rancabuaya</a>
+				<a href="santolo.html">Pantai Santolo</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<a href="index.html#Curug">
+				<button class="dropbtn">Curug</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="citambur.html">Curug Citambur</a>
+				<a href="Malela.html">Curug Malela</a>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="konten">
+		<div class="kolomisi1">
+			<h1 class="center">Gunung Guntur</h1>
+			<p class="para1">
+					Gunung guntur, gunung yang berlokasi di garut ini memiliki ketinggian 2249 mdpl, yang membuatnya menjadi incaran para pendaki pemula. Walaupun tinggi gunung tidak terlalu tinggi, tetapi medan yang dilalui cukup berat dikarenakan hawa panas, jarangnya pepohonan untuk melindungi dan jalur menuju puncaknya cukup terjal. Normalnya, pendakian gunung guntur menghabiskan waktu 4 jam dari pos pendakian di Desa Tanjung.
+				</p>
+				<p class="para1">
+					Banyak objek menarik yang terdapat disepanjang jalur pendakian Gunung Guntur ini, diantaranya ada pemandian air panas, sungai dan juga air terjun citiis. Panorama kawah serta pemandangan alam sekitarnya juga tak kalah indahnya.
+				</p>
+				<p class="para1">
+					Tempat berkemah para pendaki Gunung Guntur berada di pos ke 3 nya. Tapi, pos 3 ini tidaklah berada di puncak Gunung Gunturnya. Puncak gunung guntur yang gersang dan tandus serta bersuhu panas itu membuat kita tidak diperbolehkan untuk mendirikan tenda disana. Jika kita ingin pergi ke puncaknya, disarankan untuk pulang pergi, dilakukan pada pagi atau sore hari untuk mencari sunrise atau sunset
+				</p>
+		</div>
+		<div class="kolomisi2">
+			<!-- Slideshow container -->
+			<div class="slideshow-container">
+
+				<!-- Full-width images with number and caption text -->
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 4</div>
+					<img src="image/guntur1.jpg" class="gambar1" alt="Gunung Guntur">
+					<div class="text">Gunung guntur</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">2 / 4</div>
+					<img src="image/guntur2.jpg" class="gambar1"alt="Camping">
+					<div class="text">Camping Gunung guntur</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">3 / 4</div>
+					<img src="image/guntur3.jpg" class="gambar1"alt="Sunrise">
+					<div class="text">Sunrise di Gunung guntur</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">4 / 4</div>
+					<img src="image/guntur4.jpeg"  class="gambar1"alt="Gunung Guntur">
+					<div class="text">Perjalanan ke Gunung guntur</div>
+				</div>
+
+				<!-- Next and previous buttons -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+
+			<!-- The dots/circles -->
+			<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+				<span class="dot" onclick="currentSlide(4)"></span>
+			</div> 
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}    
+			if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+			}
+		</script>

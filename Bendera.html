@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+Nama  : Dendi Rizal Fauzi
+Kelas : IF-9
+NIM   : 10120765
+-->
+<link rel="stylesheet" type="text/css" href="Tampilan.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+	<title> Traveler</title>
+</head>
+<body>
+	<div class="header">
+		<a href="index.html"> <img class="merek" src="image/hd2.png"></a>
+	</div>
+	<div class="pilihan" >
+		<div class="dropdown">
+			<a href="index.html#Gunung">
+				<button class="dropbtn">Gunung</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="putri.html">Gunung Putri</a>
+				<a href="bendera.html">Gunung Bendera</a>
+				<a href="guntur.html">Gunung Guntur</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<a href="index.html#Situ">
+				<button class="dropbtn">Situ</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="patenggang.html">Situ Patenggang</a>
+				<a href="cileunca.html">Situ Cileunca</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<a href="index.html#Pantai">
+				<button class="dropbtn">Pantai</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="rancabuaya.html">Pantai Rancabuaya</a>
+				<a href="santolo.html">Pantai Santolo</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<a href="index.html#Curug">
+				<button class="dropbtn">Curug</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="citambur.html">Curug Citambur</a>
+				<a href="Malela.html">Curug Malela</a>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="konten">
+		<div class="kolomisi1">
+			<h1 class="center">Gunung Bendera</h1>
+			<p class="para1">
+					Gunung Bendera yang memiliki tinggi 1403 mdpl ini cukup ramah bagi pendaki. Mereka yang sudah senior maupun masih pemula takkan kesulitan menaklukannya, kita hanya perlu fisik dan stamina yang prima. Pendakian juga tidak memakan waktu yang lama, hanya memakan kurang lebih 1 jam dari basecamp ke puncak.
+				</p>
+				<p class="para1">
+					Seperti gunung gunung lainnya, Gunung bendera juga menyajikan pemandangan Sunrise yang elok.ditambah dengan pemandangan pegunungan dan perbukitannya, Sunrise di gunung bendera terlihat makin cantik.
+				</p>
+				<p class="para1">
+					Pada malam harinya, kita bisa memandangan gemerlapnya lampu kota di wilayah Bandung Barat. Akan sangat cocok bila momen ini kita lewati bersama pasangan tercinta.
+				</p>
+		</div>
+		<div class="kolomisi2">
+			<!-- Slideshow container -->
+			<div class="slideshow-container">
+
+				<!-- Full-width images with number and caption text -->
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 4</div>
+					<img src="image/Bendera1.jpg" class="gambar1" alt="Gunung Bendera">
+					<div class="text">Gunung bendera</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">2 / 4</div>
+					<img src="image/Bendera2.jpg" class="gambar1"alt="Camp di Gunung Bendera">
+					<div class="text"> Camp Di Gunung bendera</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">3 / 4</div>
+					<img src="image/Bendera3.jpg" class="gambar1"alt="Malam Hari di Gunung Bendera">
+					<div class="text">Pemandangan Malam dari Gunung Bendera</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">4 / 4</div>
+					<img src="image/Bendera4.jpg"  class="gambar1"alt="Puncak Rindu">
+					<div class="text">Puncak Rindu</div>
+				</div>
+
+				<!-- Next and previous buttons -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+
+			<!-- The dots/circles -->
+			<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+				<span class="dot" onclick="currentSlide(4)"></span>
+			</div> 
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}    
+			if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+			}
+		</script>

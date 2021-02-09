@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+Nama  : Dendi Rizal Fauzi
+Kelas : IF-9
+NIM   : 10120765
+-->
+<link rel="stylesheet" type="text/css" href="Tampilan.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+	<title> Traveler</title>
+</head>
+<body>
+	<div class="header">
+		<a href="index.html"> <img class="merek" src="image/hd2.png"></a>
+	</div>
+	<div class="pilihan" >
+		<div class="dropdown">
+			<a href="index.html#Gunung">
+				<button class="dropbtn">Gunung</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="putri.html">Gunung Putri</a>
+				<a href="bendera.html">Gunung Bendera</a>
+				<a href="guntur.html">Gunung Guntur</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<a href="index.html#Situ">
+				<button class="dropbtn">Situ</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="patenggang.html">Situ Patenggang</a>
+				<a href="cileunca.html">Situ Cileunca</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<a href="index.html#Pantai">
+				<button class="dropbtn">Pantai</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="rancabuaya.html">Pantai Rancabuaya</a>
+				<a href="santolo.html">Pantai Santolo</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<a href="index.html#Curug">
+				<button class="dropbtn">Curug</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="citambur.html">Curug Citambur</a>
+				<a href="Malela.html">Curug Malela</a>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="konten">
+		<div class="kolomisi1">
+			<h1 class="center">Curug Malela</h1>
+			<p class="	para1">
+					Curug Malela, sebuah curug atau air terjun yang lokasinya terpencil dan diapit oleh perbukitan. Curug ini memiliki julukan Little Niagara karena bentuknya yang melebar sepanjang 50 meter, dengan ketinggian 60-70 meter. 
+				</p>
+				<p class="	para1">
+					Perjalanan yang dilewati untuk sampai ke curug ini sangatlah panjang, 3 jam perjalanan menggunakan mobil, dilanjutkan 1 jam dengan ojek, lalu 1 jam perjalanan menuju curugnya, jalan yang blusukkan ke kebun dan sawah warga, dengan jalan yang berlumpur, membuat rutenya menantang. Harga ojek untuk pulang-pergi berkisar sekitar Rp 75.000.
+				</p>
+				<p class="	para1">
+					Semua perjuangan kita untuk mencapai Curug Malela akan langsung terbayarkan ketika kita melihat indahnya Curug tersebut. Bentuk curug yang melebar itu memberikan keunikkannya tersendiri. Debit air yang deras diatas bebatuannya sangatlah memanjakan mata.
+				</p>
+		</div>
+		<div class="kolomisi2">
+			<!-- Slideshow container -->
+			<div class="slideshow-container">
+
+				<!-- Full-width images with number and caption text -->
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 4</div>
+					<img src="image/Malela1.jpg" class="gambar1" alt="Curug Malela">
+					<div class="text">Curug Malela</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">2 / 4</div>
+					<img src="image/Malela2.jpg" class="gambar1"alt="Curug Malela">
+					<div class="text">Curug Malela</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">3 / 4</div>
+					<img src="image/Malela3.jpg" class="gambar1"alt="Curug Malela">
+					<div class="text">Curug Malela</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">4 / 4</div>
+					<img src="image/Malela4.png"  class="gambar1"alt="Curug Malela">
+					<div class="text">Curug Malela</div>
+				</div>
+
+				<!-- Next and previous buttons -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+
+			<!-- The dots/circles -->
+			<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+				<span class="dot" onclick="currentSlide(4)"></span>
+			</div> 
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}    
+			if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+			}
+		</script>

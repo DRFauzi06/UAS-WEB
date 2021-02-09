@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+Nama  : Dendi Rizal Fauzi
+Kelas : IF-9
+NIM   : 10120765
+-->
+<link rel="stylesheet" type="text/css" href="Tampilan.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+	<title> Traveler</title>
+</head>
+<body>
+	<div class="header">
+		<a href="index.html"> <img class="merek" src="image/hd2.png"></a>
+	</div>
+	<div class="pilihan" >
+		<div class="dropdown">
+			<a href="index.html#Gunung">
+				<button class="dropbtn">Gunung</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="putri.html">Gunung Putri</a>
+				<a href="bendera.html">Gunung Bendera</a>
+				<a href="guntur.html">Gunung Guntur</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<a href="index.html#Situ">
+				<button class="dropbtn">Situ</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="patenggang.html">Situ Patenggang</a>
+				<a href="cileunca.html">Situ Cileunca</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<a href="index.html#Pantai">
+				<button class="dropbtn">Pantai</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="rancabuaya.html">Pantai Rancabuaya</a>
+				<a href="santolo.html">Pantai Santolo</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<a href="index.html#Curug">
+				<button class="dropbtn">Curug</button>
+			</a>
+			<div class="dropdown-content">
+				<a href="citambur.html">Curug Citambur</a>
+				<a href="Malela.html">Curug Malela</a>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="konten">
+		<div class="kolomisi1">
+			<h1 class="center">Situ Patenggang</h1>
+			<p class="para1">
+					Suasana sejuk khas pegunungan dapat kita rasakan jauh sebelum kita sampai ke situ patenggang ini. Kebun teh yang terhampar luas di sekitar kita selama dalam perjalanan, pepohonan yang menjulang tinggi, serta goresan goresan kabut tipis yang membuat suasana semakin sejuk.
+				</p>
+				<p class="	para1">
+					Lokasi wisata berupa danau ini terletak di ketinggian 1600 meter dengan dipagari oleh kebun teh Rancabali yang membuat suasana semakin syahdu. Danau yang indah tersebut memiliki luas 45.000 hektar di dalam cagar alam sebesar 123.077,15 hektar.
+				</p>
+				<p class="	para1">
+					Ada suatu mitos yang terkenal dari situ ini. Mitosnya, apabila sepasang kekasih mengunjungi Batu Cinta dan berlayar mengelilingi Pulau Asmara, maka cintanya akan abadi. Banyak pasangan yang telah mencobanya, dengan harapan agar memiliki cinta yang kekal.
+				</p>
+		</div>
+		<div class="kolomisi2">
+			<!-- Slideshow container -->
+			<div class="slideshow-container">
+
+				<!-- Full-width images with number and caption text -->
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 4</div>
+					<img src="image/Patenggang1.jpg" class="gambar1" alt="perahu di situ patenggang">
+					<div class="text">perahu di Situ Patenggang</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">2 / 4</div>
+					<img src="image/Patenggang2.jpg" class="gambar1"alt="penginapan di situ patenggang">
+					<div class="text">penginapan di Situ Patenggang</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">3 / 4</div>
+					<img src="image/Patenggang3.jpg" class="gambar1"alt=" situ patenggang">
+					<div class="text"> Situ Patenggang</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">4 / 4</div>
+					<img src="image/Patenggang4.jpeg"  class="gambar1"alt="Batu Cinta di situ patenggang">
+					<div class="text">Batu Cinta di Situ Patenggang</div>
+				</div>
+
+				<!-- Next and previous buttons -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+
+			<!-- The dots/circles -->
+			<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+				<span class="dot" onclick="currentSlide(4)"></span>
+			</div> 
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}    
+			if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+			}
+		</script>
